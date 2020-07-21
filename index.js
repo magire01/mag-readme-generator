@@ -18,13 +18,18 @@ inquirer.prompt([
     },
     {
         type: "input",
-        message: "What is the purpose of this app?",
-        name: "appPurpose"
+        message: "Please enter a description for this app.",
+        name: "appDescription"
     },
     {
         type: "input",
-        message: "Please enter a description of this app",
-        name: "appDescription"
+        message: "Please provide installation details about this app.",
+        name: "appInstall"
+    },
+    {
+        type: "input",
+        message: "Please explain the usage of this app.",
+        name: "appUsage"
     },
     {
         type: "input",
@@ -32,20 +37,19 @@ inquirer.prompt([
         name: "appLink"
     },
     {
-        type: "list",
-        message: "Would you like to add images?",
-        name: "appImg",
-        choices: ["yes", "no"]
+        type: "input",
+        message: "Please enter any guidance for contributors",
+        name: "appContribute"
     },
     {
         type: "input",
-        message: "Please include any information the user needs before using the app",
-        name: "appInfo"
+        message: "Please enter testing information for this app.",
+        name: "appTest"
     },
     {
         type: "input",
-        message: "Please enter the Author's name",
-        name: "appAuthor"
+        message: "Please enter any unanswered questions you have about how this app works.",
+        name: "appQuestions"
     }
 ]).then(({ appName, appPurpose, appDescription, appLink, appImg, appInfo, appAuthor }) => {
     
