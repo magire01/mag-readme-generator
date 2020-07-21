@@ -50,10 +50,15 @@ inquirer.prompt([
         type: "input",
         message: "Please enter any unanswered questions you have about how this app works.",
         name: "appQuestions"
+    },
+    {
+        type: "input",
+        message: "Please enter author name.",
+        name: "appAuthor"
     }
-]).then(({ appName, appPurpose, appDescription, appLink, appImg, appInfo, appAuthor }) => {
+]).then(({ appName, appDescription, appInstall, appUsage, appLink, appContribute, appTest, appQuestions, appAuthor }) => {
     
-    const userEntry = `${appName} \n\n Purpose of Application: ${appPurpose} \n\n ${appDescription} \n\n Deployed Link: ${appLink} \n\n Important Info: ${appInfo} \n\n\n Author: ${appAuthor}`
+    const userEntry = `${appName} \n\n${appLink}\n\n${appDescription}\n\n Table of Contents: \n \n Installation Details: \n ${appInstall} \n\n Usage:\n ${appUsage} \n\n Contribute:\n ${appContribute}\n\n Testing:\n ${appTest}\n\n Questions:\n ${appQuestions} \n\n\nAuthor: ${appAuthor}`
 
     console.log(userEntry);
 
