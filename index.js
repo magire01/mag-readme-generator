@@ -51,7 +51,7 @@ inquirer.prompt([
     //then use fs NPM to write a readme file
 ]).then(({ appName, appDescription, appInstall, appUsage, appLink, appContribute, appTest, appQuestions, appAuthor }) => {
     //Template for Readme file
-    const userEntry = `<h2>${appName}</h2> \n\n[${appLink}](${appLink})\n\n<p>${appDescription}</p>\n\n Table of Contents:\n   Instaillation Details\n   Usage\n   Contribute\n   Testing\n   Questions\n   Author\n   Licensing \n \n Installation Details: \n ${appInstall} \n\n Usage:\n ${appUsage} \n\n Contribute:\n ${appContribute}\n\n Testing:\n ${appTest}\n\n Questions:\n ${appQuestions} \n\n\nAuthor: ${appAuthor}\n\nLicense: Default License info `
+    const userEntry = `<h2>${appName}</h2> \n\n[${appLink}](${appLink})\n\n<p>${appDescription}</p>\n\n Table of Contents:\n   Instaillation Details\n   Usage\n   Contribute\n   Testing\n   Questions\n   Author\n   Licensing \n \n Installation Details: \n ${appInstall} \n\n Usage:\n ${appUsage} \n\n Contribute:\n ${appContribute}\n\n Testing:\n ${appTest}\n\n Questions:\n ${appQuestions} \n\n\nAuthor: ${appAuthor}\n\nLicense: Default License info \n ![badge](https://img.shields.io/badge/license-MG-brightgreen) `
 
     console.log(userEntry);
 
