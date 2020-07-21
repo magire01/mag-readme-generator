@@ -1,15 +1,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 
-
-//Application Name
-//Purpose of app?
-//Application Description
-//Application HyperLink
-//Would you like to add images? Y/N
-//Any important information the user needs to know before using?
-//Application Author
-
+//Inquirer NPM to ask user questions about readme
 inquirer.prompt([
     {
         type: "input",
@@ -56,9 +48,10 @@ inquirer.prompt([
         message: "Please enter author name.",
         name: "appAuthor"
     }
+    //then use fs NPM to write a readme file
 ]).then(({ appName, appDescription, appInstall, appUsage, appLink, appContribute, appTest, appQuestions, appAuthor }) => {
-    
-    const userEntry = `${appName} \n\n${appLink}\n\n${appDescription}\n\n Table of Contents: \n \n Installation Details: \n ${appInstall} \n\n Usage:\n ${appUsage} \n\n Contribute:\n ${appContribute}\n\n Testing:\n ${appTest}\n\n Questions:\n ${appQuestions} \n\n\nAuthor: ${appAuthor}`
+    //Template for Readme file
+    const userEntry = `<h2>${appName}</h2> \n\n[${appLink}](${appLink})\n\n<p>${appDescription}</p>\n\n Table of Contents:\n   Instaillation Details\n   Usage\n   Contribute\n   Testing\n   Questions\n   Author\n   Licensing \n \n Installation Details: \n ${appInstall} \n\n Usage:\n ${appUsage} \n\n Contribute:\n ${appContribute}\n\n Testing:\n ${appTest}\n\n Questions:\n ${appQuestions} \n\n\nAuthor: ${appAuthor}\n\nLicense: Default License info `
 
     console.log(userEntry);
 
