@@ -47,6 +47,8 @@ inquirer.prompt([
         message: "Please enter the Author's name",
         name: "appAuthor"
     }
-])
+]).then(({ appName, appPurpose, appDescription, appLink, appImg, appInfo, appAuthor }) => {
+    console.log(appName, appPurpose, appDescription, appLink, appImg, appInfo, appAuthor);
+});
 
 
