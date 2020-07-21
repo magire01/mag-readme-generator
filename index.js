@@ -48,7 +48,11 @@ inquirer.prompt([
         name: "appAuthor"
     }
 ]).then(({ appName, appPurpose, appDescription, appLink, appImg, appInfo, appAuthor }) => {
-    console.log(appName, appPurpose, appDescription, appLink, appImg, appInfo, appAuthor);
+    const userEntry = `${appName} \n\n Purpose of Application: ${appPurpose} \n\n ${appDescription} \n\n Deployed Link: ${appLink} \n\n Important Info: ${appInfo} \n\n\n Author: ${appAuthor}`
+
+    console.log(userEntry);
+
+    //fs.writeFile("README1.md")
 });
 
 
