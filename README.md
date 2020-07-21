@@ -28,7 +28,7 @@
  Questions:
  None at this time 
 
-![screenshot](assets/screenshot.png)
+![screenshot](Assets/screenshot.png)
 
 Author: Mark Gire
 
